@@ -1,0 +1,39 @@
+server:
+  port: 8090
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/onlineexamination?useSSL=true&useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 1234
+  # \u914D\u7F6E\u90AE\u4EF6\u670D\u52A1\u5668\u5730\u5740
+  # \u914D\u7F6E\u90AE\u4EF6\u670D\u52A1\u5668\u7684\u7AEF\u53E3\uFF08465\u6216587\uFF09
+  mail:
+    host: smtp.qq.com
+    username: 1759128360@qq.com
+    password: rvvutgxhummnegfb
+    default-encoding: UTF-8
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
+    port: 465
+
+
+mybatis:
+  mapper-locations: /mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    default-statement-timeout: 30
+
+logging:
+  level:
+    com.launch: debug
+
+
+
